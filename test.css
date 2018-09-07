@@ -1,0 +1,4 @@
+/*form input[type=text] { width: 60%; display: block; }*/
+.form-filler-hidden {display: none;}
+.nav-pills .nav-link {color: #0077aa;}
+.nav-pills .nav-link.active {background-color: #0077aa;}

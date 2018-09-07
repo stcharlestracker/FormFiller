@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>St. Charles Family Info Form Filler</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="test.css">
+</head>
+<body>
+	<nav class="navbar navbar-light bg-light">
+	  <span class="navbar-brand mb-0 h1">St. Charles Form Filler</span>
+	  <span class="nav-item">2017-2018 Academic Year</span>
+	</nav>
+		<!-- BEGIN PILL NAVIGATION -->
+		<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+			<li class="navitem">
+				<a href="#pills-about" class="nav-link" id="pills-about-tab" data-toggle="pill" role="tab" aria-control="pills-about" aria-selected="false">About</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link active" id="pills-student-tab" data-toggle="pill" href="#pills-student" role="tab" aria-control="pills-student" aria-selected="true">Student Info</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="pills-guardian-tab" data-toggle="pill" href="#pills-guardian" role="tab" aria-control="pills-guardian" aria-selected="false">Guardian(s)/Emergency Contacts</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="pills-medical-tab" data-toggle="pill" href="#pills-medical" aria-control="pills-medical" aria-selected="false">Medical Info</a>
+			</li>
+		</ul>
+		<!-- END PILL NAVIGATION -->
+		<!-- BEGIN CONTENT -->
+		<div class="tab-content" id="pills-tabContent">
+			<div class="tab-pane fade" id="pills-about" role="tabpanel" aria-labelledby="pills-about-tab">
+				<div class="card container-fluid">
+					<h4 class="card-body">About Form Filler</h4>
+					<p class="card-text">This Web form saves your data locally to your browser's LocalStorage object, which is a lightweight name/value pair "database" that is assigned to only one domain. This means no other site can access it, and it's not stored in the cloud. The information you add to it (and you can always edit/delete any or all of that information) will persist, even if you quit your browser and shut down your computer. The drawback is that this information won't be available across your devices.</p> 
+
+					<p class="card-text">If you would like, you can choose to upload your LocalStorage info to the cloud, so you may access it from other devices.</p>
+
+					<p class="card-text mb-4">&copy; 2017 Mike Wescott</p>
+				</div>
+			</div>
+			<div class="tab-pane fade show active" id="pills-student" role="tabpanel" aria-labelledby="pills-student-tab">
+				<div class="card col-md-4">
+					<div class="card-body">
+						<h4 class="card-title">Sample Student Card</h4>
+						<p class="card-text">This card will change when you add your actual student</p>
+						<button class="btn btn-primary" data-toggle="modal" data-target="#contactForm" data-whatever="new-student">Add Your Student</button>
+					</div>
+				</div>
+				<div class="card border-light col-md-4 form-filler-hidden">
+					<div class="card-body">
+						<button class="btn btn-primary" data-toggle="modal" data-target="#contactForm" data-whatever="another-student">Add Another Student</button>
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane fade" id="pills-guardian" role="tabpanel" aria-labelledby="pills-guardian-tab">
+				<div class="card col-md-4">
+					<div class="card-body">
+						<h4 class="card-title">Sample Guardian Card</h4>
+						<p class="card-text">This card will change when you add a real guardian</p>
+						<button class="btn btn-primary" data-toggle="modal" data-target="#contactForm" data-whatever="new-guardian">Add A Guardian</button>
+					</div>
+				</div>
+				<div class="card border-light col-md-4 form-filler-hidden">
+					<div class="card-body">
+						<button class="btn btn-primary" data-toggle="modal" data-target="#contactForm" data-whatever="another-guardian">Add Another Guardian</button>
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane fade" id="pills-medical" role="tabpanel" aria-labelledby="pills-medical-tab">
+				Something else
+			</div>
+		</div> <!-- end tab content -->
+
+		<div class="modal" id="contactForm" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="contactModalLabel">Contact Info</h5>
+						<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div id="guardian-check-row" class="form-row">
+								<div>
+									This is the 
+									<div class="form-check form-check-inline">
+										<label class="form-check-label" for="mother"><input type="radio" class="form-check-input" name="mother" id="mother"> Mother</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<label class="form-check-label" for="father"><input type="radio" class="form-check-input" name="father" id="father"> Father</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<label class="form-check-label" for="guardian"><input type="radio" class="form-check-input" name="guardian" id="guardian"> Guardian</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-4">
+									<label for="firstName">First Name</label>
+									<input type="text" class="form-control" id="firstName" name="firstName">
+								</div>
+								<div class="form-group col-md-4">
+									<label for="middleName">Middle Name</label>
+									<input type="text" class="form-control" id="middleName" name="middleName">
+								</div>
+								<div class="form-group col-md-4">
+									<label for="lastName">Last Name</label>
+									<input type="text" class="form-control" id="lastName" name="lastName">
+								</div>
+							</div>	
+							<div class="form-row" id="contact-teacher-row">
+								<div class="form-group col-md-2">
+									<label for="grade">Grade</label>
+									<select class="form-control" id="grade" name="grade">
+										<option>--</option>
+										<option value="K">K</option>
+										<option value="1">1st</option>
+										<option value="2">2nd</option>
+										<option value="3">3rd</option>
+										<option value="4">4th</option>
+										<option value="5">5th</option>
+										<option value="6">6th</option>
+										<option value="7">7th</option>
+										<option value="8">8th</option>
+									</select>
+								</div>
+								<div class="form-group col-md-10">
+									<label for="teacher">Teacher</label>
+									<input type="text" class="form-control" id="teacher" name="teacher">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="address1">Address 1</label>
+								<input type="text" class="form-control" id="address1" name="address1" placeholder="1234 Main St.">
+							</div>
+							<div class="form-group">
+								<label for="address2">Address 2</label>
+								<input type="text" class="form-control" id="address2" name="address2" placeholder="Apartment, studio, or floor">
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="city">City</label>
+									<input type="text" class="form-control" id="city" name="city">
+								</div>
+								<div class="form-group col-md-2">
+									<label for="state">State</label>
+									<select class="form-control" name="state" id="state">
+										<option value="CA" selected="">CA</option>
+									</select>
+								</div>
+								<div class="form-group col-md-4">
+									<label for="zip">Zip</label>
+									<input type="text" class="form-control" name="zip" id="zip">
+								</div>
+							</div>
+							<div class="form-row">
+								<label for="multipleTest"></label>
+								<select multiple="multiple" name="multipleTest" id="multipleTest">
+									<option value=""></option>
+									<option value="alpha">Alpha</option>
+									<option value="beta">Beta</option>
+									<option value="Gamma">Gamma</option>
+									<option value="Delta">Delta</option>
+									<option value="Epsilon">Epsilon</option>
+								</select>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-4">
+									<label for="homePhone">Home Phone</label><input type="text" class="form-control" name="homePhone" id="homePhone">
+								</div>
+								<div class="form-group col-md-4">
+									<label for="workPhone">Work Phone</label><input type="text" class="form-control" name="workPhone" id="workPhone">
+								</div>
+								<div class="form-group col-md-4">
+									<label for="cellPhone">Cell Phone</label><input type="text" class="form-control" name="cellPhone" id="cellPhone">
+								</div>
+							</div>
+							<div class="form-group col-md-*">    
+							    <label for="exampleInputEmail1">Email address</label>
+							    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+							    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+							</div>
+							<input type="hidden" id="contactUid" name="contactUid" value="">
+							<!--<button type="submit" class="btn btn-primary">Add another student</button>-->
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save</button>				
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script type="text/javascript">
+
+	$('#pills-tab a').on('click', function (e) {
+	  e.preventDefault();
+	  $(this).tab('show');
+	});
+
+	$('#contactForm .btn-primary').on('click', function() {
+		// 1. Save all form data to a JSON obj
+		var formData = {};
+		var inputFieldString = $('#contactForm form').serialize();
+		var inputFieldArray = $('#contactForm form').serializeArray();
+		console.log($('#contactForm form'));
+		console.log("inputFieldArray " + inputFieldArray);
+		for (var i = 0; i < inputFieldArray.length; i+=1) {
+			console.log(inputFieldArray[i]);
+		}
+		
+		// 2. Serialize JSON obj and stick in LocalStorage
+
+		// 3. Disable form fields & display "Saved" message
+
+		// 4. Reveal "Edit" and "Add Another" buttons
+	})
+
+	$('#contactForm').on('show.bs.modal', function (event) {
+	  var button = $(event.relatedTarget); // Button that triggered the modal
+	  var contactType = button.data('whatever'); // Extract info from data-* attributes
+	  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+	  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+	  var modal = $(this);
+
+	  modal.find('#contactUid').val("");
+	  // generate new UID for contact
+	  var idLength = 12;
+	  var newId = Math.floor(Math.random() * Math.pow(10, idLength));
+	  console.log("new id " + newId);
+	  modal.find('#contactUid').val(newId);
+
+	  switch(contactType) {
+	  	case "new-student":
+			modal.find('.modal-title').text('New Student');
+			modal.find('#contact-teacher-row').show();
+			modal.find('#guardian-check-row').hide();
+	  		break;
+	  	case "another-student":
+	  		break;
+	  	case "new-guardian":
+	  		modal.find('.modal-title').text('New Guardian');
+			modal.find('#guardian-check-row').show();
+			modal.find('#contact-teacher-row').hide();
+	  		break;
+	  	case "another-guardian":
+	  		break;
+	  	case "medical":
+	  		break;
+	  	default:
+	  		break;
+	  }
+
+	});
+
+	$().on();
+
+</script>
+</body>
+</html>

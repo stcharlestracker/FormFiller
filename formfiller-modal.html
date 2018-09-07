@@ -1,0 +1,94 @@
+			<div class="tab-pane fade show active" id="pills-student" role="tabpanel" aria-labelledby="pills-student-tab">
+				<form>
+					<div class="form-row">
+						<div class="col-md-6">
+							This is the 
+							<div class="form-check form-check-inline">
+								<label class="form-check-label" for="mother"><input type="radio" class="form-check-input" name="mother" id="mother"> Mother</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<label class="form-check-label" for="father"><input type="radio" class="form-check-input" name="father" id="father"> Father</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<label class="form-check-label" for="guardian"><input type="radio" class="form-check-input" name="guardian" id="guardian"> Guardian</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-4">
+							<label for="firstName">First Name</label>
+							<input type="text" class="form-control" id="firstName" name="firstName">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="middleName">Middle Name</label>
+							<input type="text" class="form-control" id="middleName" name="middleName">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="lastName">Last Name</label>
+							<input type="text" class="form-control" id="lastName" name="lastName">
+						</div>
+					</div>	
+					<div class="form-row">
+						<div class="form-group col-md-2">
+							<label for="grade">Grade</label>
+							<select class="form-control" id="grade" name="grade">
+								<option>--</option>
+								<option value="K">K</option>
+								<option value="1">1st</option>
+								<option value="2">2nd</option>
+								<option value="3">3rd</option>
+								<option value="4">4th</option>
+								<option value="5">5th</option>
+								<option value="6">6th</option>
+								<option value="7">7th</option>
+								<option value="8">8th</option>
+							</select>
+						</div>
+						<div class="form-group col-md-10">
+							<label for="teacher">Teacher</label>
+							<input type="text" class="form-control" id="teacher" name="teacher">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="address1">Address 1</label>
+						<input type="text" class="form-control" id="address1" name="address1" placeholder="1234 Main St.">
+					</div>
+					<div class="form-group">
+						<label for="address2">Address 2</label>
+						<input type="text" class="form-control" id="address2" name="address2" placeholder="Apartment, studio, or floor">
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="city">City</label>
+							<input type="text" class="form-control" id="city" name="city">
+						</div>
+						<div class="form-group col-md-2">
+							<label for="state">State</label>
+							<select class="form-control" name="state" id="state">
+								<option value="CA" selected="">CA</option>
+							</select>
+						</div>
+						<div class="form-group col-md-4">
+							<label for="zip">Zip</label>
+							<input type="text" class="form-control" name="zip" id="zip">
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-4">
+							<label for="homePhone">Home Phone</label><input type="text" class="form-control" name="homePhone" id="homePhone">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="workPhone">Work Phone</label><input type="text" class="form-control" name="workPhone" id="workPhone">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="cellPhone">Cell Phone</label><input type="text" class="form-control" name="cellPhone" id="cellPhone">
+						</div>
+					</div>
+					<div class="form-group col-md-8">    
+					    <label for="exampleInputEmail1">Email address</label>
+					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+					    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+					</div>
+					<button type="submit" class="btn btn-primary">Add another student</button>
+				</form>
+			</div>
